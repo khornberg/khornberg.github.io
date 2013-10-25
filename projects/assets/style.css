@@ -1,0 +1,494 @@
+html {
+  background: url("bg.png") repeat;
+}
+
+body {
+  font: 13px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  color: #666;
+  min-width: 960px;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 20px;
+  color: #0084b4;
+}
+
+a:link, a:visited {
+  color: #0084b4;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+#wrapper {
+  position: relative;
+  width: 960px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+#main {
+  height: 400px;
+  text-align: center;
+}
+
+#main, div.header, li.repo {
+  background: white;
+  background: rgba(255, 255, 255, 0.7);
+  -moz-box-shadow:    0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  box-shadow:         0px 0px 5px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+#main h1 {
+  margin: 30px 0;
+}
+
+#main h1, #main p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#main p {
+  font-size: 11px;
+  line-height: 2;
+}
+
+#logo {
+  width: 210px;
+  height: 210px;
+  padding: 5px;
+  text-indent: -99999px;
+  background-size: 210px 210px;
+}
+
+#logo h1 {
+  margin: 0;
+}
+
+div.header {
+  height: 130px;
+}
+
+div.header h1, div.header p {
+  margin: 10px 15px 0;
+}
+
+div.header h1 {
+  margin-bottom: 10px;
+}
+
+#num-repos, #num-members, #num-gists {
+  font-size: 14px;
+  font-weight: bold;
+  color: #0084b4;
+  line-height: 15px;
+}
+
+#statistics a:link, #statistics a:visited {
+  color: inherit;
+}
+
+#statistics p.email {
+  margin-top: 6px;
+  font-size: 11px;
+}
+
+#recently-updated h1 a {
+  font-weight: normal;
+  font-size: 11px;
+}
+
+#recently-updated-repos {
+  margin-left: 15px;
+}
+
+#recently-updated-repos li {
+  line-height: 1.5;
+}
+
+#recently-updated-repos li span {
+  display: inline-block;
+  padding: 0 1px;
+}
+
+#recently-updated-repos li span {
+  font-size: 11px;
+}
+
+#recently-updated-repos li span.name {
+  padding: 0 6px 0 0;
+  font-size: 13px;
+}
+
+#recently-updated-repos li span.time a,
+#recently-updated-repos li span.watchers a,
+#recently-updated-repos li span.forks a {
+  color: #999;
+}
+
+li.repo {
+  height: 250px;
+}
+
+li.repo > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+
+li.repo a:hover {
+  background: #efefef;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+li.repo h2, li.repo h3, li.repo p {
+  margin: 10px 15px;
+}
+
+li.repo h2 {
+  margin-bottom: 2px;
+  max-width: 160px;
+  overflow: hidden;
+}
+
+li.repo h3 {
+  font-size: 11px;
+  margin-top: 2px;
+  margin-bottom: 15px;
+  color: #999;
+}
+
+.repo:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-right: 50px solid #0080b0;
+  pointer-events: none;
+}
+
+
+/* Taken from 
+* https://github.com/doda/github-language-colors/blob/master/colors.json
+* 
+* Replaced spaces with '-', '#' with 'sharp', and '+' with 'p'
+*/
+
+.repo.arduino:after {
+  border-right-color: #bd79d1;
+}
+
+.repo.java:after {
+  border-right-color: #b07219;
+}
+
+.repo.vhdl:after {
+  border-right-color: #543978;
+}
+
+.repo.scala:after {
+  border-right-color: #7dd3b0;
+}
+
+.repo.emacs-lisp:after {
+  border-right-color: #c065db;
+}
+
+.repo.delphi:after {
+  border-right-color: #b0ce4e;
+}
+
+.repo.ada:after {
+  border-right-color: #02f88c;
+}
+
+.repo.viml:after {
+  border-right-color: #199c4b;
+}
+
+.repo.perl:after {
+  border-right-color: #0298c3;
+}
+
+.repo.lua:after {
+  border-right-color: #fa1fa1;
+}
+
+.repo.rebol:after {
+  border-right-color: #358a5b;
+}
+
+.repo.verilog:after {
+  border-right-color: #848bf3;
+}
+
+.repo.factor:after {
+  border-right-color: #636746;
+}
+
+.repo.ioke:after {
+  border-right-color: #078193;
+}
+
+.repo.r:after {
+  border-right-color: #198ce7;
+}
+
+.repo.erlang:after {
+  border-right-color: #949e0e;
+}
+
+.repo.nu:after {
+  border-right-color: #c9df40;
+}
+
+.repo.autohotkey:after {
+  border-right-color: #6594b9;
+}
+
+.repo.clojure:after {
+  border-right-color: #db5855;
+}
+
+.repo.shell:after {
+  border-right-color: #5861ce;
+}
+
+.repo.assembly:after {
+  border-right-color: #a67219;
+}
+
+.repo.parrot:after {
+  border-right-color: #f3ca0a;
+}
+
+.repo.turing:after {
+  border-right-color: #45f715;
+}
+
+.repo.applescript:after {
+  border-right-color: #3581ba;
+}
+
+.repo.eiffel:after {
+  border-right-color: #946d57;
+}
+
+.repo.common-lisp:after {
+  border-right-color: #3fb68b;
+}
+
+.repo.dart:after {
+  border-right-color: #cccccc;
+}
+
+.repo.supercollider:after {
+  border-right-color: #46390b;
+}
+
+.repo.coffeescript:after {
+  border-right-color: #244776;
+}
+
+.repo.xquery:after {
+  border-right-color: #2700e2;
+}
+
+.repo.haskell:after {
+  border-right-color: #29b544;
+}
+
+.repo.racket:after {
+  border-right-color: #ae17ff;
+}
+
+.repo.elixir:after {
+  border-right-color: #6e4a7e;
+}
+
+.repo.haxe:after {
+  border-right-color: #346d51;
+}
+
+.repo.ruby:after {
+  border-right-color: #701516;
+}
+
+.repo.self:after {
+  border-right-color: #0579aa;
+}
+
+.repo.fantom:after {
+  border-right-color: #dbded5;
+}
+
+.repo.groovy:after {
+  border-right-color: #e69f56;
+}
+
+.repo.c:after {
+  border-right-color: #555;
+}
+
+.repo.javascript:after {
+  border-right-color: #f15501;
+}
+
+.repo.d:after {
+  border-right-color: #fcd46d;
+}
+
+.repo.ooc:after {
+  border-right-color: #b0b77e;
+}
+
+.repo.cpp:after {
+  border-right-color: #f34b7d;
+}
+
+.repo.dylan:after {
+  border-right-color: #3ebc27;
+}
+
+.repo.nimrod:after {
+  border-right-color: #37775b;
+}
+
+.repo.standard-ml:after {
+  border-right-color: #dc566d;
+}
+
+.repo.objective-c:after {
+  border-right-color: #f15501;
+}
+
+.repo.nemerle:after {
+  border-right-color: #0d3c6e;
+}
+
+.repo.mirah:after {
+  border-right-color: #c7a938;
+}
+
+.repo.boo:after {
+  border-right-color: #d4bec1;
+}
+
+.repo.objective-j:after {
+  border-right-color: #ff0c5a;
+}
+
+.repo.rust:after {
+  border-right-color: #dea584;
+}
+
+.repo.prolog:after {
+  border-right-color: #74283c;
+}
+
+.repo.ecl:after {
+  border-right-color: #8a1267;
+}
+
+.repo.gosu:after {
+  border-right-color: #82937f;
+}
+
+.repo.fortran:after {
+  border-right-color: #4d41b1;
+}
+
+.repo.coldfusion:after {
+  border-right-color: #ed2cd6;
+}
+
+.repo.ocaml:after {
+  border-right-color: #3be133;
+}
+
+.repo.fancy:after {
+  border-right-color: #7b9db4;
+}
+
+.repo.pure-data:after {
+  border-right-color: #f15501;
+}
+
+.repo.python:after {
+  border-right-color: #3581ba;
+}
+
+.repo.tcl:after {
+  border-right-color: #e4cc98;
+}
+
+.repo.arc:after {
+  border-right-color: #ca2afe;
+}
+
+.repo.puppet:after {
+  border-right-color: #cc5555;
+}
+
+.repo.io:after {
+  border-right-color: #a9188d;
+}
+
+.repo.max:after {
+  border-right-color: #ce279c;
+}
+
+.repo.go:after {
+  border-right-color: #8d04eb;
+}
+
+.repo.asp:after {
+  border-right-color: #6a40fd;
+}
+
+.repo.visual-basic:after {
+  border-right-color: #945db7;
+}
+
+.repo.php:after {
+  border-right-color: #6e03c1;
+}
+
+.repo.scheme:after {
+  border-right-color: #1e4aec;
+}
+
+.repo.vala:after {
+  border-right-color: #3581ba;
+}
+
+.repo.smalltalk:after {
+  border-right-color: #596706;
+}
+
+.repo.matlab:after {
+  border-right-color: #bb92ac;
+}
+
+.repo.csharp:after {
+  border-right-color: #bb92af;
+}
