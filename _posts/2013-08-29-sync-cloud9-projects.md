@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sync Cloud9 Projects
-tag: cloud9, git, tools, projects
+tag: [cloud9, git, tools, projects]
 ---
 
 Recently, I had a project on [Cloud9](https://c9.io) that I was also working on locally. After getting the different features ready at the different locations I had a conundrum. How do I sync these two repositories? Or more specifically, how do I sync the code from c9 to my local git repo?  
