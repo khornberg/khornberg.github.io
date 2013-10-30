@@ -1,3 +1,7 @@
+---
+layout: post
+title: LightTable
+---
 
 ###[LightTable](http://lighttable.com)
 
