@@ -1,3 +1,8 @@
+---
+layout: post
+title: Create a MP3 from a CD
+---
+
 Another VLC command I found out recently.
 
 The _in_ file extention will depend on what is on the CD. I've found .wav for Windows and .aiff for Mac. I don't know if that is always like that, just an observation.
