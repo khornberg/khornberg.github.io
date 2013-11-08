@@ -1,7 +1,3 @@
----
-layout: post
-title: LightTable
----
 
 ###[LightTable](http://lighttable.com)
 
@@ -21,13 +17,12 @@ Primarily using ST3, I wanted a more familiar console toggle, toggling of commen
 
 ```
 {:+ {:app {"ctrl-`" [:toggle-console]}
-
-     :editor {"alt-w" [:editor.watch.watch-selection]
-              "alt-shift-w" [:editor.watch.unwatch]
-              "ctrl-/" [:toggle-comment-selection]
-              "ctrl-g" [:goto-line]
-              "ctrl-shift-e" [:clear-inline-results]
-              "ctrl-l" [:clear-console]}}}
+    :editor {"alt-w" [:editor.watch.watch-selection]
+        "alt-shift-w" [:editor.watch.unwatch]
+        "ctrl-/" [:toggle-comment-selection]
+        "ctrl-g" [:goto-line]
+        "ctrl-shift-e" [:clear-inline-results]
+        "ctrl-l" [:clear-console]}}}
 ```
 
 ####user.behaviors
@@ -36,9 +31,9 @@ These are fairly generic behaviors and don't even scratch the surface of what yo
 
 ```
 :editor [:lt.objs.editor/wrap
-              (:lt.objs.style/set-theme "monokai")
-              (:lt.objs.style/font-settings "Source Code Pro", 11, 1.2)
-              :lt.objs.editor/line-numbers]
+    (:lt.objs.style/set-theme "monokai")
+    (:lt.objs.style/font-settings "Source Code Pro", 11, 1.2)
+    :lt.objs.editor/line-numbers]
 ```
 
 ####Add to Ubuntu Launcher
