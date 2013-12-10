@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create a MPG File From a DVD
+title: DVD to MPG
 ---
 
 ###Steps

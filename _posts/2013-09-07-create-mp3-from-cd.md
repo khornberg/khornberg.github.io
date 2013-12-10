@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Create a MP3 from a CD
+title: CD to MP3
 ---
 
 Another VLC command I found out recently.

@@ -61,6 +61,4 @@ StartupNotify=true
 
 *Customize the Exec and Icon paths*
 
-[^1]: I'm using a 2010 Lenovo laptop with an Intel 2.20 GHz processor, 3GB RAM, Intel GM45 Express Chipset for graphics, and Ubuntu 13.04 32bit. Low end but works..
-
-
+[^1]: I tested LightTable using a 2010 Lenovo laptop with an Intel 2.20 GHz processor, 3GB RAM, Intel GM45 Express Chipset for graphics, and Ubuntu 13.04 32bit. Low end but works..
