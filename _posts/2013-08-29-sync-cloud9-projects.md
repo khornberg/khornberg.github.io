@@ -49,6 +49,7 @@ chmod a+x post-update
 ##Accessing
 You can now push, pull, or clone your repo at https://c9.io/[user_name]/[project_name]/workspace/[git_repo_name]  
 Of course you can add a remote so you don't have to type the url in every time.
+
 ```
 git remote add c9 https://c9.io/[user_name]/[project_name]/workspace/awesome-project.git
 ```

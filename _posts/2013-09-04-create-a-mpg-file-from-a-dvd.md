@@ -1,3 +1,8 @@
+---
+layout: post
+title: DVD to MPG
+---
+
 ###Steps
 1. Copy the VIDEO_TS folder from the DVD to your hard drive
 2. For each `.VOB` file run this command `vlc FILE --sout-keep --sout='#transcode{vcodec=h264, acodec=mpga}:std{access=file, mux=ps,dst=file2.mpg}'`[^1]

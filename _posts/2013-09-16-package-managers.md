@@ -1,3 +1,8 @@
+---
+layout: post
+title: Package Managers
+---
+
 ##How many package managers, dependency managers, or app stores do you use?
 
 1. [apt](apt-get.org) - Advanced Package Tool
