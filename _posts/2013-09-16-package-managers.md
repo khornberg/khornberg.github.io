@@ -24,14 +24,14 @@ Those are the ones I thought of off the top of my head. I'm sure there are some 
 
 What are are they all managing?
   
-Debian/Ubuntu OS packages  
-PHP local packages  
-PHP web packages  
-Node packages  
-Ruby packages  
-Source code  
-[Sublime Text](sublimetext.com) packages  
-Browser packages
+* Debian/Ubuntu OS packages  
+* PHP local packages  
+* PHP web packages  
+* Node packages  
+* Ruby packages  
+* Source code  
+* [Sublime Text](sublimetext.com) packages  
+* Browser packages
 
 Are those for dependency management and version control really all that different that the a package manager or app store. You want to make sure you have the latest and greatest code or binaries and you don't want it to break anything.
 
@@ -39,13 +39,13 @@ I'd like to have something the rules them all...probably too dangerous though.
 
 How to update each one:
 
-1. ```apt-get update && apt-get upgrade```
-2. ```pear upgrade-all```
-3. ```composer update``` Updates the php dependencies
-    1. ```composer selfupdate``` Updates composer itself
-4. ```nvm update```
-5. ```gem update```
-6. ```bower update```
-7. ```git pull origin master```
-8. ```package upgrade``` Type the former on the command palette and select ```Package Control: Upgrade Package```
+1. `apt-get update && apt-get upgrade`
+2. `pear upgrade-all`
+3. `composer update` Updates the php dependencies
+    1. `composer selfupdate` Updates composer itself
+4. `nvm update`
+5. `gem update`
+6. `bower update`
+7. `git pull origin master`
+8. `package upgrade` Type the former on the command palette and select `Package Control: Upgrade Package`
 9. Chromium's automatically update

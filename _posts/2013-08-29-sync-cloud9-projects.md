@@ -9,11 +9,11 @@ Recently, I had a project on [Cloud9](https://c9.io) that I was also working on 
 
 I could zip up everything at either location but that didn't seem to make sense. These are already git repositories.  
 
-I could set up a [GitHub](https://github.com) repo but I have files locally I don't want public. I don't use [BitBucket](http://bitbucket.com) nor do I pay for private repos on GitHub. Both of those are certainly viable options.  
+I could set up a [GitHub](https://github.com) repo but I have files locally I don't want public. I don't use [BitBucket](http://bitbucket.com) nor did I want a private repo on GitHub. Both of those are certainly viable options though.  
 
-###Solution?
+Solution?
 
-####Bare Git Repository  
+###Bare Git Repository  
 
 Then I realized I can access my public c9 workspace with my code, why can't I just pull from that? Well, you can with a little work. I find this to be useful to sync projects that are on c9 and locally; between someone that doesn't use c9 but wants to push to or pull your repo; or to move a public c9 project to a private c9 project without using a hosting service.
 

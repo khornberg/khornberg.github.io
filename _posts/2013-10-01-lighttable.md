@@ -6,15 +6,17 @@ category: articles
 
 ###[LightTable](http://lighttable.com)
 
-LightTable is a developing IDE that tries to make developing a little easier by giving live, instant feedback. From my playing with it over the last few days that's a bit harder than it sounds. There are some good critical posts about LightTable.
+LightTable is a developing IDE that tries to make developing a little easier by giving live, instant feedback. That's a bit harder than it sounds. There are some good critical posts about LightTable if you search for them.
 
-My impressions so far are:
+My impressions of LightTable (0.5.10) so far are:
 
-* Seems sluggish[^1] compared to [ST3](http://sublimetext.com/3)
+* Seems sluggish[^1] compared to [SublimeText 3](http://sublimetext.com/3)
 * No multiple cursors
-* No code folding
+* No code foldi ng
 
 Being a developing IDE, plugin availability is nil. This will likely change.
+
+I customized it to be a bit more like ST3. Those customizations are below.
 
 ####user.keymap
 
@@ -60,6 +62,6 @@ Categories=TextEditor;Development;
 StartupNotify=true
 {% endhighlight %}
 
-*Customize the Exec and Icon paths*
+*Remember to customize the Exec and Icon paths for you machine*
 
 [^1]: I tested LightTable using a 2010 Lenovo laptop with an Intel 2.20 GHz processor, 3GB RAM, Intel GM45 Express Chipset for graphics, and Ubuntu 13.04 32bit. Low end but works..
