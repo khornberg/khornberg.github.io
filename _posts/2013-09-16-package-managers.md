@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Package Managers
+category: articles
 ---
 
 ##How many package managers, dependency managers, or app stores do you use?

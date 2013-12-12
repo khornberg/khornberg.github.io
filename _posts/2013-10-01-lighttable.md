@@ -1,6 +1,7 @@
 ---
 layout: post
 title: LightTable
+category: articles
 ---
 
 ###[LightTable](http://lighttable.com)
@@ -19,7 +20,7 @@ Being a developing IDE, plugin availability is nil. This will likely change.
 
 Primarily using ST3, I wanted a more familiar console toggle, toggling of comments, goto line, and clearing the console.
 
-```
+{% highlight clojure %}
 {:+ {:app {"ctrl-`" [:toggle-console]}
     :editor {"alt-w" [:editor.watch.watch-selection]
         "alt-shift-w" [:editor.watch.unwatch]
@@ -27,24 +28,24 @@ Primarily using ST3, I wanted a more familiar console toggle, toggling of commen
         "ctrl-g" [:goto-line]
         "ctrl-shift-e" [:clear-inline-results]
         "ctrl-l" [:clear-console]}}}
-```
+{% endhighlight %}	
 
 ####user.behaviors
 
 These are fairly generic behaviors and don't even scratch the surface of what you can change but they were the ones I wanted to change first. I wanted my lines to wrap, us the monokai theme, use the Adobe Source Code Pro font and show line numbers.
 
-```
+{% highlight clojure %}
 :editor [:lt.objs.editor/wrap
     (:lt.objs.style/set-theme "monokai")
     (:lt.objs.style/font-settings "Source Code Pro", 11, 1.2)
     :lt.objs.editor/line-numbers]
-```
+{% endhighlight %}
 
 ####Add to Ubuntu Launcher
 
 Copy the text below into a file named `lighttable.desktop` and place in `~/.local/share/applications`
 
-```
+{% highlight bash %}
 [Desktop Entry]
 Version=0.5
 Type=Application
@@ -57,7 +58,7 @@ MimeType=text/plain;
 Icon=/opt/LightTable/core/img/lticon.png
 Categories=TextEditor;Development;
 StartupNotify=true
-```
+{% endhighlight %}
 
 *Customize the Exec and Icon paths*
 

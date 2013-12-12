@@ -31,9 +31,9 @@
         <span><a href="{{ site.url }}{{ page.url }}" rel="bookmark" title="{{ page.title }}" itemprop="url"><i class="icon-link"></i> Permalink</a></span>
         {% for tag in page.tags %}
               {% if forloop.first %}
-                  <span class="tags"><i class="icon-tag"></i> TAGS <br />
+                  <span class="tags"><i class="icon-tag"> tags </i>
               {% endif %}
-                  <a href="{{ site.url }}/tags.html#{{ tag | cgi_encode }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag | downcase }}</a><br />
+                  <a href="{{ site.url }}/tags.html#{{ tag | cgi_encode }}" title="Pages tagged {{ tag }}" rel="tag">{{ tag | downcase }}</a>&nbsp
               {% if forloop.last %}
                   </span>
               {% endif %}

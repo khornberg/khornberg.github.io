@@ -9,7 +9,7 @@ search:           true
 # Owner/author information
 owner:
   name:           Kyle Hornberg
-  avatar:         https://identicons.github.com/khornberg.png
+  avatar:         
   email:          
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
@@ -58,7 +58,7 @@ kramdown:
   use_coderay: false
 
   coderay:
-    coderay_line_numbers: 
+    coderay_line_numbers:
     coderay_line_numbers_start: 1
     coderay_tab_width: 4
     coderay_bold_every: 10
