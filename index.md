@@ -2,6 +2,10 @@
 layout: page
 title: 
 ---
+ 
+### After Darkness Light  
+
+The world changes constantly yet there is nothing new under the sun. Philosophy matters. So does a person's epistemology. These things shape our thinking. Developing shapes our thinking. You will find a little bit about how I think through the articles and projects.
 
 <ul class="post-list">
 {% for post in site.posts limit:10 %} 
