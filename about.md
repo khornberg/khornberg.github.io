@@ -21,4 +21,5 @@ image:
     color: white;
     background: rgba(0, 0, 0, 0.7);
     padding: 10px;
+    border-radius: 3px;
 ">I love Jesus, my wife, and learning new things.</span></p>
