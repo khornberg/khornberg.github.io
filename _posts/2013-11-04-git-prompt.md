@@ -4,7 +4,7 @@ title: Git Prompt
 category: articles
 ---
 
-Using the `git-prompt.sh` from the git package I added the following my `.bashrc` so my prompt would be more helpful. Much of this was copied from [here](http://ithaca.arpinum.org/2013/01/02/git-prompt.html).
+Using the `git-prompt.sh` from the git package I added the following to my `.bashrc` so my prompt would be more helpful. Much of this was copied from [here](http://ithaca.arpinum.org/2013/01/02/git-prompt.html).
 
 {% highlight bash %}
 # Git prompt
