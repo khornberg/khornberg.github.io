@@ -1,6 +1,7 @@
 ---
 layout: post
 title: GitHub Pages from Yeoman
+tag: [help, github, yeoman]
 category: articles
 ---
 

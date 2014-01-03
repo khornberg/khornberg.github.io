@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Sync Cloud9 Projects
-tag: [cloud9, git, tools, projects]
+tag: [cloud9, git, tools]
 category: articles
 ---
 

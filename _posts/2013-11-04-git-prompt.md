@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Git Prompt
+tag: [git, help]
 category: articles
 ---
 

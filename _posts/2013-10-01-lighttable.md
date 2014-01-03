@@ -1,6 +1,7 @@
 ---
 layout: post
 title: LightTable
+tag: [lighttable, tools, help]
 category: articles
 ---
 

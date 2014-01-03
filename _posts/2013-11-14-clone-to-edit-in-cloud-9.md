@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Clone to Edit in Cloud 9
+tag: [question, cloud9]
 category: articles
 ---
 
