@@ -10,10 +10,10 @@ A webapp to customize bible reading plans using bible.math.js <a href="/articles
 	</article></li>
 
 	<li><article><i class="icon-code"></i> <a href="http://wordpress.org/plugins/sermon-manager-import/">Sermon Manager Import</a><br />
-Import .mp3 sermons into <a href="http://wordpress.org/plugins/sermon-manager-for-wordpress/">Sermon-Manager-for-Wordpress</a> using ID3 data. <a href="/articles/bible-reading-planner">(Read more)</a></article></li>
+Import .mp3 sermons into <a href="http://wordpress.org/plugins/sermon-manager-for-wordpress/">Sermon-Manager-for-Wordpress</a> using ID3 data. <a href="/articles/sermon-manager-import">(Read more)</a></article></li>
 
 	<li><article><i class="icon-code"></i> <a href="http://github.com/khornberg/bible.math.js">bible.math.js</a><br />
-Do math on bible references. Based on John Dyer's `bible.js` and `bible.reference.js` from the <a href="http://bib.ly">bib.ly</a> project. <a href="/articles/bible-reading-planner">(Read more)</a></article></li>
+Do math on bible references. Based on John Dyer's `bible.js` and `bible.reference.js` from the <a href="http://bib.ly">bib.ly</a> project. <a href="/articles/bible.math.js">(Read more)</a></article></li>
 </ul>
 
 ### Recent Articles

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Customizing Sermon Manager
-tag: [WordPress, Sermon Manger, plugin]
+tag: [WordPress, Sermon Mangaer, plugin]
 category: articles
 ---
 Customizing Sermon Manager for WordPress varies in difficultly depening on what you'd like to do.

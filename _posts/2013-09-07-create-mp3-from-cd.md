@@ -11,6 +11,4 @@ The _in_ file extension will depend on what is on the CD. I've found .wav for Wi
 
 An example:
 
-```
-vlc "in.aiff" :sout='#transcode{acodec=mp3,ab=128}:std{access=file,mux=dummy,dst="file.mp3"}'
-```
+`vlc "in.aiff" :sout='#transcode{acodec=mp3,ab=128}:std{access=file,mux=dummy,dst="file.mp3"}'`

@@ -13,7 +13,7 @@ My impressions of LightTable (0.5.10) so far are:
 
 * Seems sluggish[^1] compared to [SublimeText 3](http://sublimetext.com/3)
 * No multiple cursors
-* No code foldi ng
+* No code folding
 
 Being a developing IDE, plugin availability is nil. This will likely change.
 

@@ -38,7 +38,7 @@ You want to place the style before the list element. Note that these styles are 
 
 This is not the prettiest solution however.
 
-### This's a plugin for it
+### There's a plugin for it
 
 If all of that is laborious then you can use a plugin called [Glance That](wordpress.org/plugins/glance-that/).
 
@@ -51,6 +51,7 @@ If all of that is laborious then you can use a plugin called [Glance That](wordp
 The code below produce what you see in the pictures.
 
 {% highlight php %}
+<?php
 /*
  * @since 2014-01-08
  * Add the number of sermons to the Right Now / At a Glance on the Dashboard
