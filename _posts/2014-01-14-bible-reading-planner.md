@@ -19,6 +19,6 @@ One specifies a sequence, duration, and amount to read. The app creates the plan
 
 #### About
 
-Bible reading planner began using [Yeoman](yeoman.io) and is hosted on [Github](github.com). Contributions and issues are welcome.  
+Bible reading planner began using [Yeoman](http://yeoman.io) and is hosted on [Github](http://github.com). Contributions and issues are welcome.  
 
 Someday, you might be able to create your own plans and use it; begin the plan at an arbitrary reference (e.g. Joshua 2:23); track your progress; or change the language.
