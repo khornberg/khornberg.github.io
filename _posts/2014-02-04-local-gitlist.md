@@ -29,7 +29,9 @@ GitList is at version 0.4 and moving slowly towards 1.0. So it will be a while b
 
 ##How do I get it to work locally?
 
-If you have PHP 5.4+ then GitList is ready for you to use locally with minimal setup. Simply run `php -S localhost:8000 index.php` in the `gitlist` folder and open your browser to the url. That is it. Nice huh? I thought so. 
+If you have PHP 5.4+ then GitList is ready for you to use locally with minimal setup. Simply run `php -S localhost:8000 index.php` in the `gitlist` folder and open your browser to the url. That is it. Nice huh? I thought so.
+
+I recommend setting the cache to false in the config.ini.
 
 If you are on Ubuntu then the following gist has a script to do the above and a desktop file to add to your `~/.local/share/applications` folder.
 
