@@ -50,7 +50,7 @@ If all of that is laborious then you can use a plugin called [Glance That](wordp
 
 The code below produce what you see in the pictures.
 
-{% highlight php %}
+{% highlight php linenos %}
 <?php
 /*
  * @since 2014-01-08
@@ -96,6 +96,3 @@ function wpfc_dashboard() {
     echo $items;
 }
 {% endhighlight %}
-
-
-  [1]: http:

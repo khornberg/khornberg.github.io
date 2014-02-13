@@ -27,7 +27,7 @@ Call `sermon_download_media` in any of the functions above and download links wi
 
 If you have the [download shortcode](http://wordpress.org/plugins/download-shortcode/) plugin installed the links download the file rather than the play the file.
 
-{% highlight php %}
+{% highlight php linenos %}
 <?php
 /**
  * Display download link for sermon excerpt
@@ -74,7 +74,7 @@ To display both audio and video you can either replace the core function of `wpf
 
 This shows the video above the audio player.
 
-{% highlight php %}
+{% highlight php linenos %}
 <?php
 function display_audio_video()
 {
@@ -106,7 +106,7 @@ function display_audio_video()
 
 Combined for a view.
 
-{% highlight php %}
+{% highlight php linenos%}
 <?php
 function render_sermon_single()
 {
