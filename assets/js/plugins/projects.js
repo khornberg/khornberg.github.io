@@ -78,7 +78,7 @@
     repos = repos || [];
     page = page || 1;
 
-    var uri = "https://api.github.com/users/" + user + "/repos?callback=?"
+    var uri = "https://api.github.com/users/" + user + "/repos?"
             + "&per_page=100"
             + "&page="+page;
 
@@ -144,7 +144,7 @@
     repos = repos || [];
     page = page || 1;
 
-    var uri = "https://api.github.com/users/" + user + "/gists?callback=?"
+    var uri = "https://api.github.com/users/" + user + "/gists?"
             + "&per_page=100"
             + "&page="+page;
 
