@@ -149,6 +149,7 @@
             + "&page="+page;
 
     $.getJSON(uri, function (result) {
+      debugger
       if (result.data && result.data.length > 0) {
         repos = repos.concat(result.data);
         addGists(repos, page + 1);
