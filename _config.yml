@@ -37,7 +37,8 @@ links:
   - title: Articles
     url: /articles
   - title: Projects
-    url: "https://github.com/khornberg?tab=repositories"
+    url: https://github.com/khornberg?tab=repositories
+    external: true
   - title: About
     url: /about
 
