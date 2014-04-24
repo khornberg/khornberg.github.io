@@ -2,7 +2,7 @@ title: Post Tenebras Lux
 description:      By perseverance the snail made it to the ark. -- Charles Spurgeon
 logo:             site-logo.png
 disqus_shortname: 
-search:           true
+search:           false
 #Comment out url when working locally to resolve base urls correctly
 url: http://khornberg.github.com
 
