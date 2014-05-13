@@ -1,0 +1,372 @@
+/*Flex box*/
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.flex-item {
+  flex: 1 1 auto;
+  flex-basis: 200px;
+  overflow: hidden;
+}
+
+.repo {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background: #FAFAFA;
+  position: relative;
+}
+
+.repo > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 0px;
+}
+
+.repo a:hover {
+  background: #efefef;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.repo h2, .repo h3, .repo p {
+  margin: 10px 15px;
+}
+
+.repo h2 {
+  margin-bottom: 2px;
+  overflow: hidden;
+  font-size: 20px;
+}
+
+.repo h3 {
+  font-size: 11px;
+  margin-top: 2px;
+  color: #999;
+}
+
+.repo:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-right: 50px solid #0080b0;
+  pointer-events: none;
+}
+
+
+/* Taken from
+* https://github.com/doda/github-language-colors/blob/master/colors.json
+*
+* Replaced spaces with '-', '#' with 'sharp', and '+' with 'p'
+*/
+
+.arduino:after {
+  border-right-color: #bd79d1;
+}
+
+.java:after {
+  border-right-color: #b07219;
+}
+
+.vhdl:after {
+  border-right-color: #543978;
+}
+
+.scala:after {
+  border-right-color: #7dd3b0;
+}
+
+.emacs-lisp:after {
+  border-right-color: #c065db;
+}
+
+.delphi:after {
+  border-right-color: #b0ce4e;
+}
+
+.ada:after {
+  border-right-color: #02f88c;
+}
+
+.viml:after {
+  border-right-color: #199c4b;
+}
+
+.perl:after {
+  border-right-color: #0298c3;
+}
+
+.lua:after {
+  border-right-color: #fa1fa1;
+}
+
+.rebol:after {
+  border-right-color: #358a5b;
+}
+
+.verilog:after {
+  border-right-color: #848bf3;
+}
+
+.factor:after {
+  border-right-color: #636746;
+}
+
+.ioke:after {
+  border-right-color: #078193;
+}
+
+.r:after {
+  border-right-color: #198ce7;
+}
+
+.erlang:after {
+  border-right-color: #949e0e;
+}
+
+.nu:after {
+  border-right-color: #c9df40;
+}
+
+.autohotkey:after {
+  border-right-color: #6594b9;
+}
+
+.clojure:after {
+  border-right-color: #db5855;
+}
+
+.shell:after {
+  border-right-color: #5861ce;
+}
+
+.assembly:after {
+  border-right-color: #a67219;
+}
+
+.parrot:after {
+  border-right-color: #f3ca0a;
+}
+
+.turing:after {
+  border-right-color: #45f715;
+}
+
+.applescript:after {
+  border-right-color: #3581ba;
+}
+
+.eiffel:after {
+  border-right-color: #946d57;
+}
+
+.common-lisp:after {
+  border-right-color: #3fb68b;
+}
+
+.dart:after {
+  border-right-color: #cccccc;
+}
+
+.supercollider:after {
+  border-right-color: #46390b;
+}
+
+.coffeescript:after {
+  border-right-color: #244776;
+}
+
+.xquery:after {
+  border-right-color: #2700e2;
+}
+
+.haskell:after {
+  border-right-color: #29b544;
+}
+
+.racket:after {
+  border-right-color: #ae17ff;
+}
+
+.elixir:after {
+  border-right-color: #6e4a7e;
+}
+
+.haxe:after {
+  border-right-color: #346d51;
+}
+
+.ruby:after {
+  border-right-color: #701516;
+}
+
+.self:after {
+  border-right-color: #0579aa;
+}
+
+.fantom:after {
+  border-right-color: #dbded5;
+}
+
+.groovy:after {
+  border-right-color: #e69f56;
+}
+
+.c:after {
+  border-right-color: #555;
+}
+
+.javascript:after {
+  border-right-color: #f15501;
+}
+
+.d:after {
+  border-right-color: #fcd46d;
+}
+
+.ooc:after {
+  border-right-color: #b0b77e;
+}
+
+.cpp:after {
+  border-right-color: #f34b7d;
+}
+
+.dylan:after {
+  border-right-color: #3ebc27;
+}
+
+.nimrod:after {
+  border-right-color: #37775b;
+}
+
+.standard-ml:after {
+  border-right-color: #dc566d;
+}
+
+.objective-c:after {
+  border-right-color: #f15501;
+}
+
+.nemerle:after {
+  border-right-color: #0d3c6e;
+}
+
+.mirah:after {
+  border-right-color: #c7a938;
+}
+
+.boo:after {
+  border-right-color: #d4bec1;
+}
+
+.objective-j:after {
+  border-right-color: #ff0c5a;
+}
+
+.rust:after {
+  border-right-color: #dea584;
+}
+
+.prolog:after {
+  border-right-color: #74283c;
+}
+
+.ecl:after {
+  border-right-color: #8a1267;
+}
+
+.gosu:after {
+  border-right-color: #82937f;
+}
+
+.fortran:after {
+  border-right-color: #4d41b1;
+}
+
+.coldfusion:after {
+  border-right-color: #ed2cd6;
+}
+
+.ocaml:after {
+  border-right-color: #3be133;
+}
+
+.fancy:after {
+  border-right-color: #7b9db4;
+}
+
+.pure-data:after {
+  border-right-color: #f15501;
+}
+
+.python:after {
+  border-right-color: #3581ba;
+}
+
+.tcl:after {
+  border-right-color: #e4cc98;
+}
+
+.arc:after {
+  border-right-color: #ca2afe;
+}
+
+.puppet:after {
+  border-right-color: #cc5555;
+}
+
+.io:after {
+  border-right-color: #a9188d;
+}
+.max:after {
+  border-right-color: #ce279c;
+}
+
+.go:after {
+  border-right-color: #8d04eb;
+}
+
+.repo .asp:after {
+  border-right-color: #6a40fd;
+}
+
+.visual-basic:after {
+  border-right-color: #945db7;
+}
+
+.php:after {
+  border-right-color: #6e03c1;
+}
+
+.scheme:after {
+  border-right-color: #1e4aec;
+}
+
+.vala:after {
+  border-right-color: #3581ba;
+}
+
+.smalltalk:after {
+  border-right-color: #596706;
+}
+
+.matlab:after {
+  border-right-color: #bb92ac;
+}
+
+.csharp:after {
+  border-right-color: #bb92af;
+}

@@ -1,0 +1,867 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+::-moz-selection {
+  background-color: #c6c6c6;
+  color: #202020;
+  text-shadow: none;
+}
+::selection {
+  background-color: #c6c6c6;
+  color: #202020;
+  text-shadow: none;
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(80, 80, 80, 0.3);
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(0, 0, 0, 0.2);
+}
+.all-caps {
+  text-transform: uppercase;
+}
+.pull-left {
+  float: left;
+}
+.pull-right {
+  float: right;
+}
+.unstyled-list {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.unstyled-list li {
+  list-style-type: none;
+}
+header {
+  text-align: center;
+}
+b,
+i,
+strong,
+em,
+blockquote,
+p,
+q,
+span,
+figure,
+img,
+h1,
+h2,
+header,
+input,
+a {
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.site-logo img {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: .05s;
+  -moz-animation-delay: .05s;
+  -o-animation-delay: .05s;
+  animation-delay: .05s;
+  border: 4px solid #ffffff;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  border-radius: 100px;
+}
+@media min-width: 32rem {
+  .site-logo img {
+    width: 150px;
+    height: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    border-radius: 150px;
+  }
+}
+@media min-width: 38rem {
+  .site-logo img {
+    width: 200px;
+    height: 200px;
+    -webkit-border-radius: 200px;
+    -moz-border-radius: 200px;
+    border-radius: 200px;
+  }
+}
+.site-title {
+  margin-bottom: 0;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: .75s;
+  -moz-animation-delay: .75s;
+  -o-animation-delay: .75s;
+  animation-delay: .75s;
+}
+.site-description {
+  margin-top: 0;
+  font-size: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  font-style: italic;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -o-animation-delay: 1s;
+  animation-delay: 1s;
+}
+@media min-width: 32rem {
+  .site-description {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+.entry-feature-image {
+  margin: -70px 0 0;
+  width: 100%;
+}
+@media min-width: 32rem {
+  .entry-feature-image {
+    margin-top: -75px;
+  }
+}
+@media min-width: 38rem {
+  .entry-feature-image {
+    margin-top: -145px;
+  }
+}
+.post-list li > a {
+  border-bottom-width: 0;
+}
+.post-list a {
+  color: #505050;
+}
+.post-list {
+  margin: 0;
+  padding: 20px 0;
+  list-style-type: none;
+}
+.post-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid rgba(80, 80, 80, 0.1);
+  *zoom: 1;
+}
+.post-list li:before,
+.post-list li:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.post-list li:after {
+  clear: both;
+}
+.post-list a > span {
+  float: right;
+}
+.post-list .entry-date {
+  font-size: 12px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  display: none;
+}
+@media (min-width: 28rem) {
+  .post-list .entry-date {
+    display: inline;
+  }
+}
+.image-credit {
+  margin: 0 0 0 auto;
+  max-width: 440px;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: right;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  color: #9e9e9e;
+  *zoom: 1;
+}
+.image-credit:before,
+.image-credit:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.image-credit:after {
+  clear: both;
+}
+@media min-width: 32rem {
+  .image-credit {
+    max-width: 760px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+@media min-width: 38rem {
+  .image-credit {
+    max-width: 960px;
+  }
+}
+.image-credit a {
+  color: #9e9e9e;
+}
+.animated {
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -ms-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+}
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  -ms-animation-duration: 2s;
+  -o-animation-duration: 2s;
+  animation-duration: 2s;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  -moz-animation-name: fadeIn;
+  -o-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+@-o-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+@-webkit-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-2000px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+@-o-keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-2000px);
+  }
+  100% {
+    opacity: 1;
+    -o-transform: translateY(0);
+  }
+}
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  -moz-animation-name: fadeInDownBig;
+  -o-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+}
+@-webkit-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: scale(1.05);
+  }
+  70% {
+    -webkit-transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    -moz-transform: scale(1.05);
+  }
+  70% {
+    -moz-transform: scale(0.9);
+  }
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+@-o-keyframes bounceIn {
+  0% {
+    opacity: 0;
+    -o-transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    -o-transform: scale(1.05);
+  }
+  70% {
+    -o-transform: scale(0.9);
+  }
+  100% {
+    -o-transform: scale(1);
+  }
+}
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.bounceIn {
+  -webkit-animation-name: bounceIn;
+  -moz-animation-name: bounceIn;
+  -o-animation-name: bounceIn;
+  animation-name: bounceIn;
+}
+@-webkit-keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translateY(30px);
+  }
+  80% {
+    -webkit-transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: translateY(30px);
+  }
+  80% {
+    -moz-transform: translateY(-10px);
+  }
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+@-o-keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    -o-transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    -o-transform: translateY(30px);
+  }
+  80% {
+    -o-transform: translateY(-10px);
+  }
+  100% {
+    -o-transform: translateY(0);
+  }
+}
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  -moz-animation-name: bounceInDown;
+  -o-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
+@-webkit-keyframes drop {
+  0% {
+    -webkit-transform: translateY(-500px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes drop {
+  0% {
+    -moz-transform: translateY(-500px);
+  }
+  100% {
+    -moz-transform: translateY(0);
+  }
+}
+@-o-keyframes drop {
+  0% {
+    -o-transform: translateY(-500px);
+  }
+  100% {
+    -o-transform: translateY(0);
+  }
+}
+@keyframes drop {
+  0% {
+    transform: translateY(-500px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+.drop {
+  -webkit-animation-name: drop;
+  -moz-animation-name: drop;
+  -o-animation-name: drop;
+  animation-name: drop;
+}
+/*Flex box*/
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.flex-item {
+  flex: 1 1 auto;
+  flex-basis: 200px;
+  overflow: hidden;
+}
+.repo {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  background: #FAFAFA;
+  position: relative;
+}
+.repo > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 0px;
+}
+.repo a:hover {
+  background: #efefef;
+  background: rgba(0, 0, 0, 0.05);
+}
+.repo h2,
+.repo h3,
+.repo p {
+  margin: 10px 15px;
+}
+.repo h2 {
+  margin-bottom: 2px;
+  overflow: hidden;
+  font-size: 20px;
+}
+.repo h3 {
+  font-size: 11px;
+  margin-top: 2px;
+  color: #999;
+}
+.repo:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid transparent;
+  border-right: 50px solid #0080b0;
+  pointer-events: none;
+}
+/* Taken from
+* https://github.com/doda/github-language-colors/blob/master/colors.json
+*
+* Replaced spaces with '-', '#' with 'sharp', and '+' with 'p'
+*/
+.arduino:after {
+  border-right-color: #bd79d1;
+}
+.java:after {
+  border-right-color: #b07219;
+}
+.vhdl:after {
+  border-right-color: #543978;
+}
+.scala:after {
+  border-right-color: #7dd3b0;
+}
+.emacs-lisp:after {
+  border-right-color: #c065db;
+}
+.delphi:after {
+  border-right-color: #b0ce4e;
+}
+.ada:after {
+  border-right-color: #02f88c;
+}
+.viml:after {
+  border-right-color: #199c4b;
+}
+.perl:after {
+  border-right-color: #0298c3;
+}
+.lua:after {
+  border-right-color: #fa1fa1;
+}
+.rebol:after {
+  border-right-color: #358a5b;
+}
+.verilog:after {
+  border-right-color: #848bf3;
+}
+.factor:after {
+  border-right-color: #636746;
+}
+.ioke:after {
+  border-right-color: #078193;
+}
+.r:after {
+  border-right-color: #198ce7;
+}
+.erlang:after {
+  border-right-color: #949e0e;
+}
+.nu:after {
+  border-right-color: #c9df40;
+}
+.autohotkey:after {
+  border-right-color: #6594b9;
+}
+.clojure:after {
+  border-right-color: #db5855;
+}
+.shell:after {
+  border-right-color: #5861ce;
+}
+.assembly:after {
+  border-right-color: #a67219;
+}
+.parrot:after {
+  border-right-color: #f3ca0a;
+}
+.turing:after {
+  border-right-color: #45f715;
+}
+.applescript:after {
+  border-right-color: #3581ba;
+}
+.eiffel:after {
+  border-right-color: #946d57;
+}
+.common-lisp:after {
+  border-right-color: #3fb68b;
+}
+.dart:after {
+  border-right-color: #cccccc;
+}
+.supercollider:after {
+  border-right-color: #46390b;
+}
+.coffeescript:after {
+  border-right-color: #244776;
+}
+.xquery:after {
+  border-right-color: #2700e2;
+}
+.haskell:after {
+  border-right-color: #29b544;
+}
+.racket:after {
+  border-right-color: #ae17ff;
+}
+.elixir:after {
+  border-right-color: #6e4a7e;
+}
+.haxe:after {
+  border-right-color: #346d51;
+}
+.ruby:after {
+  border-right-color: #701516;
+}
+.self:after {
+  border-right-color: #0579aa;
+}
+.fantom:after {
+  border-right-color: #dbded5;
+}
+.groovy:after {
+  border-right-color: #e69f56;
+}
+.c:after {
+  border-right-color: #555;
+}
+.javascript:after {
+  border-right-color: #f15501;
+}
+.d:after {
+  border-right-color: #fcd46d;
+}
+.ooc:after {
+  border-right-color: #b0b77e;
+}
+.cpp:after {
+  border-right-color: #f34b7d;
+}
+.dylan:after {
+  border-right-color: #3ebc27;
+}
+.nimrod:after {
+  border-right-color: #37775b;
+}
+.standard-ml:after {
+  border-right-color: #dc566d;
+}
+.objective-c:after {
+  border-right-color: #f15501;
+}
+.nemerle:after {
+  border-right-color: #0d3c6e;
+}
+.mirah:after {
+  border-right-color: #c7a938;
+}
+.boo:after {
+  border-right-color: #d4bec1;
+}
+.objective-j:after {
+  border-right-color: #ff0c5a;
+}
+.rust:after {
+  border-right-color: #dea584;
+}
+.prolog:after {
+  border-right-color: #74283c;
+}
+.ecl:after {
+  border-right-color: #8a1267;
+}
+.gosu:after {
+  border-right-color: #82937f;
+}
+.fortran:after {
+  border-right-color: #4d41b1;
+}
+.coldfusion:after {
+  border-right-color: #ed2cd6;
+}
+.ocaml:after {
+  border-right-color: #3be133;
+}
+.fancy:after {
+  border-right-color: #7b9db4;
+}
+.pure-data:after {
+  border-right-color: #f15501;
+}
+.python:after {
+  border-right-color: #3581ba;
+}
+.tcl:after {
+  border-right-color: #e4cc98;
+}
+.arc:after {
+  border-right-color: #ca2afe;
+}
+.puppet:after {
+  border-right-color: #cc5555;
+}
+.io:after {
+  border-right-color: #a9188d;
+}
+.max:after {
+  border-right-color: #ce279c;
+}
+.go:after {
+  border-right-color: #8d04eb;
+}
+.repo .asp:after {
+  border-right-color: #6a40fd;
+}
+.visual-basic:after {
+  border-right-color: #945db7;
+}
+.php:after {
+  border-right-color: #6e03c1;
+}
+.scheme:after {
+  border-right-color: #1e4aec;
+}
+.vala:after {
+  border-right-color: #3581ba;
+}
+.smalltalk:after {
+  border-right-color: #596706;
+}
+.matlab:after {
+  border-right-color: #bb92ac;
+}
+.csharp:after {
+  border-right-color: #bb92af;
+}
+input[type="search"] {
+  background-color: #202020;
+  border: rgba(255, 255, 255, 0.1) solid 1px;
+  border-radius: 5px;
+  color: white;
+  padding-left: 5px;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+}

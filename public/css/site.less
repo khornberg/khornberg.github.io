@@ -1,0 +1,254 @@
+// So Simple site.less
+//
+// Colors
+@base-color: #202020;
+@black: #505050;
+@white: #fff;
+@doc-font-size: 16;
+
+// mixins.less
+// .rounded(VALUE);
+.rounded(@radius:4px) {
+-webkit-border-radius : @radius;
+-moz-border-radius : @radius;
+border-radius : @radius; }
+
+@small:       ~"";
+@medium:      ~"min-width: 32rem";
+@large:       ~"min-width: 38rem";
+
+// .transition(PROPERTY DURATION DELAY(OPTIONAL) TIMING-FINCTION);
+.transition(@transition) {
+-webkit-transition : @transition;
+-moz-transition : @transition;
+-ms-transition : @transition;
+-o-transition : @transition;
+transition : @transition; }
+
+.animation(@name, @duration: 300ms, @delay: 0, @ease: ease) {
+  -webkit-animation: @name @duration @delay @ease;
+  -moz-animation:    @name @duration @delay @ease;
+  -ms-animation:     @name @duration @delay @ease;
+}
+
+// Just the REMs
+// -------------
+.font-rem(@size) {
+  font-size: 0px + @size;
+  font-size: 0rem + @size / @doc-font-size;
+}
+
+// Clearfix
+// --------------------
+// For clearing floats like a boss h5bp.com/q
+.clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Selection
+// --------------------------------------------------
+
+::-moz-selection {
+    background-color: lighten(@base-color, 65%);
+    color: @base-color;
+    text-shadow: none;
+}
+::selection {
+    background-color: lighten(@base-color, 65%);
+    color: @base-color;
+    text-shadow: none;
+}
+
+// Webkit Custom Scrollbar
+// --------------------------------------------------
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px fade(@black,30);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: rgba(0,0,0,0.2);
+}
+
+// Global Classes
+// --------------------------------------------------
+
+.all-caps {
+    text-transform: uppercase;
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.unstyled-list {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+    li {
+        list-style-type: none;
+    }
+}
+header {
+  text-align: center;
+}
+
+// Global Transition
+// ---------------------------------------------------
+
+b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a {
+    .transition(all .2s ease);
+}
+
+// Logo from So Simple page.less
+.site-logo {
+  img {
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -o-animation-duration: 1s;
+    animation-duration: 1s;
+      -webkit-animation-delay: .05s;
+      -moz-animation-delay: .05s;
+      -o-animation-delay: .05s;
+      animation-delay: .05s;
+      border: 4px solid @white;
+      .rounded(100px);
+    @media @medium {
+      width: 150px;
+      height: 150px;
+      .rounded(150px);
+    }
+    @media @large {
+      width: 200px;
+      height: 200px;
+      .rounded(200px);
+    }
+  }
+}
+.site-title {
+  margin-bottom: 0;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+    -webkit-animation-delay: .75s;
+    -moz-animation-delay: .75s;
+    -o-animation-delay: .75s;
+    animation-delay: .75s;
+}
+.site-description {
+  margin-top: 0;
+  .font-rem(16);
+  font-weight: 400;
+  font-style: italic;
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  -o-animation-duration: 1s;
+  animation-duration: 1s;
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    animation-delay: 1s;
+  @media @medium {
+    .font-rem(20);
+  }
+}
+
+.entry-feature-image {
+  margin: -70px 0 0;
+  width: 100%;
+  @media @medium {
+    margin-top: -75px;
+  }
+  @media @large {
+    margin-top: -145px;
+  }
+}
+
+.post-list {
+  li > a {
+    border-bottom-width: 0;
+  }
+  a {
+    color: @black;
+  }
+}
+
+// Post index layout
+.post-list {
+  margin: 0;
+  padding: 20px 0;
+  list-style-type: none;
+  li {
+    padding: 8px 0;
+    border-bottom: 1px solid lighten(@black,80);
+    border-bottom: 1px solid fade(@black,10);
+    .clearfix();
+  }
+  a > span {
+    float: right;
+  }
+  .entry-date {
+    .font-rem(12);
+    text-transform: uppercase;
+    display: none;
+    @media (min-width: 28rem) {
+      display: inline;
+    }
+  }
+}
+
+// From typography.less
+// Feature Image Caption
+// --------------------------------------------------
+.image-credit {
+  margin: 0 0 0 auto;
+  max-width: 440px;
+  padding-top: 5px;
+  padding-right: 20px;
+  padding-left: 20px;
+  text-align: right;
+  .font-rem(14);
+  line-height: 1.3;
+  color: lighten(#515151, 30);
+  .clearfix();
+  @media @medium {
+    max-width: 760px;
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+  @media @large {
+    max-width: 960px;
+  }
+  a {
+    color: lighten(#515151, 30);
+  }
+}

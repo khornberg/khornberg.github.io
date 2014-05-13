@@ -1,10 +1,16 @@
+A portfolio of sorts.
+
 I modified the [So Simple Theme](https://github.com/mmistakes/so-simple-theme).
-I also modified the [Twitter projects page](https://github.com/twitter/twitter.github.com)
+I modified the [Twitter projects page](https://github.com/twitter/twitter.github.com).
+I modified the [Laynon Theme](http://lanyon.getpoole.com).
+
+## Lanyon License
+Open sourced under the [MIT license](https://github.com/poole/lanyon/blob/master/LICENSE.md).
 
 ## Projects License
 Copyright 2012 Twitter, Inc.
 
-Licensed under the Apache License, Version 2.0: http://www.apache.org/licenses/LICENSE-2.0
+Licensed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 ## So Simple Theme License
 
