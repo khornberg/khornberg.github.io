@@ -14,8 +14,8 @@
 border-radius : @radius; }
 
 @small:       ~"";
-@medium:      ~"min-width: 32rem";
-@large:       ~"min-width: 38rem";
+@medium:      ~"(min-width: 32rem)";
+@large:       ~"(min-width: 38rem)";
 
 // .transition(PROPERTY DURATION DELAY(OPTIONAL) TIMING-FINCTION);
 .transition(@transition) {
@@ -142,14 +142,14 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
       border: 4px solid @white;
       .rounded(100px);
     @media @medium {
-      width: 150px;
-      height: 150px;
-      .rounded(150px);
+      width: 125px;
+      height: 125px;
+      .rounded(125px);
     }
     @media @large {
-      width: 200px;
-      height: 200px;
-      .rounded(200px);
+      width: 175px;
+      height: 175px;
+      .rounded(175px);
     }
   }
 }
@@ -183,13 +183,13 @@ b, i, strong, em, blockquote, p, q, span, figure, img, h1, h2, header, input, a 
 }
 
 .entry-feature-image {
-  margin: -70px 0 0;
+  margin: -20px 0 0;
   width: 100%;
   @media @medium {
-    margin-top: -75px;
+    margin-top: -25px;
   }
   @media @large {
-    margin-top: -145px;
+    margin-top: 2-5px;
   }
 }
 
