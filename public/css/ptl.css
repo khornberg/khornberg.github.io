@@ -583,7 +583,7 @@ a {
   margin-right: 10px;
   margin-bottom: 10px;
   margin-top: 10px;
-  background: #FAFAFA;
+  border: #c6c6c6 solid 1px;
   position: relative;
 }
 .repo > a {
@@ -595,7 +595,7 @@ a {
   color: inherit;
   border-bottom: 0px;
 }
-.repo a:hover {
+.repo:hover {
   background: #efefef;
   background: rgba(0, 0, 0, 0.05);
 }
