@@ -47,7 +47,7 @@
   // }
 
   function getJSON (uri, callback) {
-    var data = '';
+    var data = undefined;
     request = new XMLHttpRequest();
     request.open('GET', uri, true);
 
@@ -55,10 +55,18 @@
       if (request.status >= 200 && request.status < 400){
         // Success!
         data = JSON.parse(request.responseText);
+        console.debug(data);
+        callback(data);
       } else {
         // We reached our target server, but it returned an error
         console.error(request.responseText);
+        var repos = document.getElementById('flex-container'),
+        message = '<p>Oh no...something went wrong :(<p>',
+        item = document.createElement('div');
 
+        item.classList.add('flex-item', 'repo');
+        item.innerHTML = message;
+        repos.appendChild(item);
       }
     };
 
@@ -68,28 +76,41 @@
     };
 
     request.send();
-console.debug(data);
-    callback(data);
+  }
+
+  function repoHotness(repo) {
+    repo.pushed_at = new Date(repo.pushed_at);
+
+    var weekHalfLife  = 1.146 * Math.pow(10, -9);
+
+    var pushDelta    = (new Date) - Date.parse(repo.pushed_at);
+    var createdDelta = (new Date) - Date.parse(repo.created_at);
+
+    var weightForPush = 1;
+    var weightForWatchers = 1.314 * Math.pow(10, 7);
+
+    repo.hotness = weightForPush * Math.pow(Math.E, -1 * weekHalfLife * pushDelta);
+    repo.hotness += weightForWatchers * repo.watchers / createdDelta;
+    repo.hotness += (repo.watchers > 0 || repo.forks_count > 0) ? .5 : 0;
   }
 
   function addRepo(repo) {
-    // var languageClass = styleLanguage(repo.language);
-    // var $item = $("<li>").addClass("repo " + (languageClass || '').toLowerCase());
-    // var $link = $("<a>").attr("href", repoUrl(repo)).appendTo($item);
-    // $link.append($("<h2>").text(repo.name));
-    // $link.append($("<h3>").text(repo.language + ((repo.fork) ? ' : forked' : '')));
-    // $link.append($("<p>").text(repoDescription(repo)));
-    // $item.appendTo("#repos");
-
-    var repos = document.querySelectorAll ('.flex-container'),
-    lanaguage = (languageClass || '').toLowerCase(),
+    var repos = document.getElementById('flex-container'),
+    language = (repo.language || '').toLowerCase(),
     link = repoUrl(repo),
-    repoName = (repo.name),
+    repoName = (repo.name) ? repo.name : '',
     isForked = (repo.fork) ? ' : forked' : '',
     description = repoDescription(repo);
 
-    var item = '<div class="flex-item repo' + lanaguage + '"> <a href="' + link + '"> <h2>'+ repoName +'</h2> <h3>'+ language + ' ' + isForked +'</h3> <h4>'+ stars + ' ' + forks +'</h4> <p>'+ description +'</p> </a> </div>';
-console.debug(item);
+    description = (description === null) ? '' : description;
+
+    var inner = '<a href="' + link + '"> <h2>'+ repoName +'</h2> <h3>'+ language + ' ' + isForked +'</h3> <h3> Stars: '+ repo.stargazers_count + ' Forks: ' + repo.forks_count +'</h3> <p>'+ description +'</p> </a>';
+
+    var item = document.createElement('div');
+    item.classList.add('flex-item', 'repo');
+    if (language) item.classList.add(language);
+    item.innerHTML = inner;
+
     repos.appendChild(item);
   }
 
@@ -97,18 +118,25 @@ console.debug(item);
     // Allows one to get the language of the first file in the gist
     // Also used for the number of files in the gist
     // Object.keys could be used inline if desired
-    var gistFiles = Object.keys(repo.files);
-    var languageClass = styleLanguage(repo.files[gistFiles[0]].language);
-    var $item = $("<li>").addClass("repo " + (languageClass || '').toLowerCase());
-    var $link = $("<a>").attr("href", repoUrl(repo)).appendTo($item);
-    $link.append($("<h2>").text("gist: " + repo.id));
-    $link.append($("<h3>").text(
-        repo.files[gistFiles[0]].language + " : " +
-        ((gistFiles.length > 1) ? gistFiles.length + " files" : gistFiles.length + " file") +
-        ((repo.fork) ? ' : forked' : '')
-    ));
-    $link.append($("<p>").text(repoDescription(repo)));
-    $item.appendTo("#gists");
+    var gistFiles = Object.keys(repo.files),
+    repos = document.getElementById('flex-container'),
+    language = (repo.files[gistFiles[0]].language || '').toLowerCase(),
+    link = repoUrl(repo),
+    repoName = 'gist: ' + repo.id,
+    isForked = (repo.fork) ? ' : forked' : '',
+    files = ((gistFiles.length > 1) ? gistFiles.length + " files" : gistFiles.length + " file")
+    description = repoDescription(repo);
+
+    description = (description === null) ? '' : description;
+
+    var inner = '<a href="' + link + '"> <h2>'+ repoName +'</h2> <h3>'+ language + ' ' + files + ' ' + isForked +'</h3> <p>'+ description +'</p> </a>';
+
+    var item = document.createElement('div');
+    item.classList.add('flex-item', 'repo');
+    if (language) item.classList.add(language);
+    item.innerHTML = inner;
+
+    repos.appendChild(item);
   }
 
   function addRepos(repos, page) {
@@ -120,8 +148,8 @@ console.debug(item);
             + "&page="+page;
 
     getJSON(uri, function (result) {
-      if (result.data && result.data.length > 0) {
-        repos = repos.concat(result.data);
+      if (result && result.length > 0) {
+        repos = repos.concat(result);
         addRepos(repos, page + 1);
       }
       else {
@@ -129,36 +157,25 @@ console.debug(item);
           // $("#num-repos").text(repos.length);
 
           // Convert pushed_at to Date.
-          repos.forEach(function (i, repo) {
-            repo.pushed_at = new Date(repo.pushed_at);
-
-            var weekHalfLife  = 1.146 * Math.pow(10, -9);
-
-            var pushDelta    = (new Date) - Date.parse(repo.pushed_at);
-            var createdDelta = (new Date) - Date.parse(repo.created_at);
-
-            var weightForPush = 1;
-            var weightForWatchers = 1.314 * Math.pow(10, 7);
-
-            repo.hotness = weightForPush * Math.pow(Math.E, -1 * weekHalfLife * pushDelta);
-            repo.hotness += weightForWatchers * repo.watchers / createdDelta;
+          repos.forEach(function (repo) {
+            repoHotness(repo);
           });
 
-          // // Sort by highest # of watchers.
-          // repos.sort(function (a, b) {
-          //   if (a.hotness < b.hotness) return 1;
-          //   if (b.hotness < a.hotness) return -1;
-          //   return 0;
-          // });
-
-          // Sort by most-recently pushed to.
+          // Sort by highest # of watchers.
           repos.sort(function (a, b) {
-            if (a.pushed_at < b.pushed_at) return 1;
-            if (b.pushed_at < a.pushed_at) return -1;
+            if (a.hotness < b.hotness) return 1;
+            if (b.hotness < a.hotness) return -1;
             return 0;
           });
 
-          repos.forEach(function (i, repo) {
+          // Sort by most-recently pushed to.
+          // repos.sort(function (a, b) {
+          //   if (a.pushed_at < b.pushed_at) return 1;
+          //   if (b.pushed_at < a.pushed_at) return -1;
+          //   return 0;
+          // });
+
+          repos.forEach(function (repo) {
             addRepo(repo);
           });
 
@@ -185,30 +202,18 @@ console.debug(item);
             + "&per_page=100"
             + "&page="+page;
 
-    $.getJSON(uri, function (result) {
-      debugger
+    getJSON(uri, function (result) {
       if (result.data && result.data.length > 0) {
         repos = repos.concat(result.data);
         addGists(repos, page + 1);
       }
       else {
-        $(function () {
+        // $(function () {
           // $("#num-gists").text(repos.length);
 
           // Convert pushed_at to Date.
-          $.each(repos, function (i, repo) {
-            repo.pushed_at = new Date(repo.pushed_at);
-
-            var weekHalfLife  = 1.146 * Math.pow(10, -9);
-
-            var pushDelta    = (new Date) - Date.parse(repo.pushed_at);
-            var createdDelta = (new Date) - Date.parse(repo.created_at);
-
-            var weightForPush = 1;
-            var weightForWatchers = 1.314 * Math.pow(10, 7);
-
-            repo.hotness = weightForPush * Math.pow(Math.E, -1 * weekHalfLife * pushDelta);
-            repo.hotness += weightForWatchers * repo.watchers / createdDelta;
+          repos.forEach(function (repo) {
+            repoHotness(repo);
           });
 
           // Sort by highest # of watchers.
@@ -218,10 +223,10 @@ console.debug(item);
             return 0;
           });
 
-          $.each(repos, function (i, repo) {
+          repos.forEach(function (repo) {
             addGist(repo);
           });
-        });
+        // });
       }
     });
   }
