@@ -1,3 +1,10 @@
+---
+layout: post
+title: Changing Docker's IP Address
+tag: [docker, tools]
+category: articles
+---
+
 # Changing Docker's IP Address
 
 I installed docker to do some experiments the other day. Everything worked find and dandy until one day I needed to connect to a server in the 172.17.0.0 range. I got some weird results. After talking with a colleague, he noted the docker0 bridge. Exactly.
