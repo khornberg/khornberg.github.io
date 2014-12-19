@@ -1,3 +1,11 @@
+---
+layout: post
+title: Ubuntu Change User
+date: "2014-07-15"
+categories:
+- articles
+---
+
 To change an Ubuntu user
 
 1. Create a temporary user or login as root
