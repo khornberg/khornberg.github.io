@@ -1,6 +1,6 @@
 ---
 layout: post
-title: multiple apache and php versions on the same server
+title: Multiple Apache and PHP Versions on the Same Server
 categories: ['articles']
 tags: ['apache', 'php']
 published: True
