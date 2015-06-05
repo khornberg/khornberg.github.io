@@ -126,7 +126,7 @@ class SimpleNote {
           request
             .post(this.api + 'login')
             .send(query)
-            .end(function(err, res) {
+            .end((err, res) => { // continue this access
               if (res.error) {
                 reject(res.error);
               }
