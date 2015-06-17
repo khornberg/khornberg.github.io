@@ -17,7 +17,7 @@ The key is to use a fat arrow function to maintain the lexical scope of the call
 
 We can see this in action in the following example class.
 
-```
+{% highlight javascript %}
 /* jshint esnext: true */
 
 class foo {
@@ -60,7 +60,7 @@ console.log('f.bar.call', f.bar.call(obj1)); // f.bar.call [ '1', '2' ]
 f.p().then(m => console.log('p', m)); // does not return anything
 f.ps().then(m => console.log('ps', m)); // ps [ 'a', 'b' ]
 f.pa().then(m => console.log('pa', m)); // pa [ 'a', 'b' ]
-```
+{% endhighlight %}
 
 Run through [babel-node](babeljs.io) to see it work.
 
@@ -69,7 +69,7 @@ Two methods to refer to the "class properties" are either to assign this to self
 
 The class snippet started like this:
 
-```
+{% highlight javascript %}
 class SimpleNote {
   constructor(email, password) {
     this.email = email;
@@ -102,11 +102,11 @@ class SimpleNote {
 
     return Promise.resolve(self.token);
   }
-```
+{% endhighlight %}
 
 And the snippet ended like so:
 
-```
+{% highlight javascript %}
 class SimpleNote {
   constructor(email, password) {
     this.email = email;
@@ -138,4 +138,4 @@ class SimpleNote {
 
     return Promise.resolve(self.token);
   }
-```
+{% endhighlight %}

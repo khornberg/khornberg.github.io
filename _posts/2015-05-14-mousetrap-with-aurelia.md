@@ -29,9 +29,9 @@ Simple command line of `jspm install npm:mousetrap`
 Aurelia is a "next generation framework." New language features like `import` are supported.
 So to import the module add the following to the top of the class file.
 
-```
+{% highlight javascript %}
 import * as Mousetrap from 'mousetrap';
-```
+{% endhighlight %}
 
 ### Initialize
 
@@ -41,24 +41,24 @@ Mousetrap is not built as an ES6 module so one has to initialize it for it to wo
 
 In the class constructor add the following code.
 
-```
+{% highlight javascript %}
 this.mousetrap = new Mousetrap.default();
-```
+{% endhighlight %}
 
 ### Use it
 
 Now the `Mousetrap` module is ready to use within your class. Simple once one knows what is expected.
 
-```
+{% highlight javascript %}
 this.mousetrap.bind('?', function() {
   console.log('j: move up\nk: move down\n?: show this help');
 });
-```
+{% endhighlight %}
 
 
 ## Final Code
 
-```
+{% highlight javascript %}
 import {inject} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-http-client';
 import * as Mousetrap from 'mousetrap';
@@ -78,4 +78,4 @@ export class Queries{
   }
 
 }
-```
+{% endhighlight %}
