@@ -3,6 +3,17 @@ layout: page
 title:
 ---
 
+<h1>Recent Articles</h1>
+<ul class="post-list">
+{% for post in site.posts limit:3 %}
+  <li>
+  <article><b><a href="{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span></a></b>
+    <p>{{ post.excerpt }}</p>
+  </article>
+  </li>
+{% endfor %}
+</ul>
+
 <h1>Recent Projects</h1>
 <ul class="post-list">
 	<li>
@@ -21,15 +32,4 @@ Import .mp3 sermons into <a href="http://wordpress.org/plugins/sermon-manager-fo
   <article><i class="icon-code"></i> <b><a href="http://github.com/khornberg/bible.math.js">bible.math.js</a></b><br />
 Do math on bible references. Based on John Dyer's `bible.js` and `bible.reference.js` from the <a href="http://bib.ly">bib.ly</a> project. <a href="/articles/bible.math.js">(Read more)</a></article>
   </li>
-</ul>
-
-<h1>Recent Articles</h1>
-<ul class="post-list">
-{% for post in site.posts limit:3 %}
-  <li>
-  <article><b><a href="{{ post.url }}">{{ post.title }} <span class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></span></a></b>
-    <p>{{ post.excerpt }}</p>
-  </article>
-  </li>
-{% endfor %}
 </ul>
