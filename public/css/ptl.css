@@ -203,6 +203,9 @@ a {
     display: inline;
   }
 }
+h1 > a {
+  color: #505050;
+}
 .image-credit {
   margin: 0 0 0 auto;
   max-width: 440px;
