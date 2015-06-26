@@ -55,7 +55,7 @@
       if (request.status >= 200 && request.status < 400){
         // Success!
         data = JSON.parse(request.responseText);
-        console.debug(data);
+        // console.debug(data);
         callback(data);
       } else {
         // We reached our target server, but it returned an error
@@ -98,7 +98,7 @@
     var repos = document.getElementById('flex-container'),
     language = (repo.language || '').toLowerCase(),
     link = repoUrl(repo),
-    repoName = (repo.name) ? repo.name : '',
+    repoName = (repo.name) ? repo.name : repo.homepage,
     isForked = (repo.fork) ? ' : forked' : '',
     description = repoDescription(repo);
 
@@ -107,9 +107,28 @@
     var inner = '<a href="' + link + '"> <h2>'+ repoName +'</h2> <h3>'+ language + ' ' + isForked +'</h3> <h3> Stars: '+ repo.stargazers_count + ' Forks: ' + repo.forks_count +'</h3> <p>'+ description +'</p> </a>';
 
     var item = document.createElement('div');
-    item.classList.add('flex-item', 'repo');
-    if (language) item.classList.add(language);
-    item.innerHTML = inner;
+    item.classList.add('flex-item', 'card');
+
+    var cardLink = document.createElement('a');
+    cardLink.setAttribute('href', link);
+
+    var header = document.createElement('div');
+    header.classList.add('card-header');
+    if (language) header.classList.add(language);
+    header.innerHTML = '<span class="card-title">'+ repoName +'</span>';
+
+    var content = document.createElement('div');
+    content.classList.add('card-content');
+    content.innerHTML = '<p>' + description + '</p>';
+
+    var action = document.createElement('div');
+    action.classList.add('card-action');
+    action.innerHTML = '<span>Stars: ' + repo.stargazers_count + '&#8212; Forks: ' + repo.forks_count + '</span>';
+
+    cardLink.appendChild(header);
+    cardLink.appendChild(content);
+    cardLink.appendChild(action);
+    item.appendChild(cardLink);
 
     repos.appendChild(item);
   }
