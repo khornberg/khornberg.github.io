@@ -1,0 +1,13 @@
+{% comment %}
+  So Simple header
+{% endcomment %}
+<header>
+{% if page.image.feature %}
+
+{% else %}
+<a href="/" class="site-logo" rel="home" title="{{ site.title }}">
+  <img src="/images/{{ site.logo }}" width="200" height="200" alt="{{ site.title }} logo" class="animated ">
+</a>
+  <h2 class="site-description animated fadeIn">{{ site.quote }}</h2>
+{% endif %}
+</header>

@@ -151,6 +151,7 @@ a {
 .entry-feature-image {
   margin: -20px 0 0;
   width: 100%;
+  border-radius: 0;
 }
 @media (min-width: 32rem) {
   .entry-feature-image {
@@ -159,7 +160,7 @@ a {
 }
 @media (min-width: 38rem) {
   .entry-feature-image {
-    margin-top: -3px;
+    margin-top: -25px;
   }
 }
 .post-list li > a {
