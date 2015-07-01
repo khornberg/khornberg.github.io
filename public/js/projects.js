@@ -123,7 +123,7 @@
 
     var action = document.createElement('div');
     action.classList.add('card-action');
-    action.innerHTML = '<span>Stars: ' + repo.stargazers_count + '&#8212; Forks: ' + repo.forks_count + '</span>';
+    action.innerHTML = '<span>Stars: ' + repo.stargazers_count + ' &#8212; Forks: ' + repo.forks_count + '</span>';
 
     cardLink.appendChild(header);
     cardLink.appendChild(content);
