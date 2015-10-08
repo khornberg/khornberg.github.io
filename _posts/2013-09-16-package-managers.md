@@ -20,6 +20,7 @@ category: articles
 	1. [mr](myrepos.branchable.com) - Multiple repository manager for all those version control systems
 1. [Sublime Text Package Manager](sublime.wbond.net) - How could I keep all my extensions straight?
 1. [Chrome](google.com/chrome)/[Chromium](chromium.org) - App store (i.e. package manager) included
+1. [Pip](https://pip.pypa.io/en/stable/) - The PyPA recommended tool for installing Python packages.
 
 Those are the ones I thought of off the top of my head. I'm sure there are some missing.
 
@@ -33,6 +34,7 @@ What are are they all managing?
 * Source code  
 * [Sublime Text](sublimetext.com) packages  
 * Browser packages
+* Python packages
 
 Are those for dependency management and version control really all that different that the a package manager or app store. You want to make sure you have the latest and greatest code or binaries and you don't want it to break anything.
 
@@ -50,3 +52,4 @@ How to update each one:
 7. `git pull origin master`
 8. `package upgrade` Type the former on the command palette and select `Package Control: Upgrade Package`
 9. Chromium's automatically update
+10. `pip install requirements.txt --upgrade`
