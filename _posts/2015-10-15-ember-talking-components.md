@@ -33,9 +33,9 @@ Component B is a link. At first the link is not setup. When the user clicks the 
 
 Using the ember-cli to setup everything we need.
 
-Add service `ember g service eventbus`
-Add components `ember g component component-a`, `ember g component component-b`
-Add acceptance test `ember g acceptance-test talking-components`
+Add service `ember g service eventbus`  
+Add components `ember g component component-a`, `ember g component component-b`  
+Add acceptance test `ember g acceptance-test talking-components`  
 
 
 ## Tests
@@ -64,11 +64,9 @@ this.set('formData', o);
 
 ## Wrapping up
 
-Clone `https://github.com/khornberg/ember-talking-components`
-
-Run `ember serve`
-
-Go to `http://localhost:4200` to see it work
+Clone `https://github.com/khornberg/ember-talking-components`  
+Run `ember serve`  
+Go to `http://localhost:4200` to see it work  
 
 ### Help
 
