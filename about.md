@@ -10,5 +10,5 @@ image:
 
 I love Jesus, my wife, and learning new things.
 
-I enjoy making things "just work," usually in JavaScript and PHP within a Linux container. Python and the other parts of the stack are enjoyable too.
+I enjoy making things "just work," usually in JavaScript and Python.
 
