@@ -1,6 +1,6 @@
 ---
 layout: post
-title: expanding the root volume of an ami
+title: Expanding the Root Volume of an AMI
 categories: ['articles']
 tags: ['aws', 'packer']
 published: True
@@ -23,6 +23,7 @@ Use Packer's [`EBS Surrogate Builder`](https://www.packer.io/docs/builders/amazo
 The template file below filters for the `amazon_linux_version` of `2017.03` to use that as the base.
 
 ```
+{% raw %}
 {
   "variables": {
     "amazon_linux_version": "2017.03",
@@ -63,4 +64,5 @@ The template file below filters for the `amazon_linux_version` of `2017.03` to u
     }
   }]
 }
+{% endraw %}
 ```
